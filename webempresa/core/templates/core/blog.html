@@ -1,0 +1,52 @@
+{% extends 'core/base.html' %}
+{% block title %}Blog{% endblock %}
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">L'autentico caffè d'italia</span>
+    <span class="site-heading-lower">La Caffettiera</span>
+  </h1>
+
+    {% block content%}
+  <!--Contenido-->
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-innerv text-center rounded">
+            <h2 class="section-heading mb-5">
+              <span class="section-heading-upper">17/05/2000</span>
+              <span class="section-heading-lower">OFERTAS DE OTOÑO</span>
+            </h2>
+            <p class="mb-0">
+              <img class="mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
+            </p>
+            <p class="mb-0 mbt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus minus ullam dolorem
+              labore maiores voluptates nam ipsam! Labore corrupti ducimus unde. Incidunt atque animi excepturi dolores
+              earum ipsum officiis sint eveniet eligendi provident placeat eos nisi amet magni debitis repellendus quae,
+              voluptate accusantium voluptates. Dolorum perspiciatis adipisci voluptas! Aliquam, consectetur!</p>
+            <p class="mb-0 mbt">
+              <span class="section-heading-under">Publicado por <em><b>Juan</b></em> en
+                <em>
+                  <a href="" class="link">General,Ofertas</a>
+                 
+                </em>
+              </span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock%}
+
+  <!-- Bootstrap -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
