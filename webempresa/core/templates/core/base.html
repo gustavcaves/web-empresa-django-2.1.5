@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% load static %}
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}{% endblock %} | La Caffettiera</title>
-
+  {% load static %}
   <!-- Bootstrap -->
   <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
 
@@ -20,13 +18,24 @@
 
   <!-- Estilos -->
   <link href="{% static 'core/css/business-casual.css' %}" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
 </head>
 
 <body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">L'autenticos caffè d'italia</span>
+    <span class="site-heading-lower">La Caffettiera</span>
+  </h1>
+
   <!-- Navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">La
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}">La
         Caffettiera</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +46,7 @@
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
           </li>
-          <li class="nav-item px-lg-4 active">
+          <li class="nav-item px-lg-4 ">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Historia</a>
           </li>
           <li class="nav-item px-lg-4">
@@ -57,46 +66,44 @@
     </div>
   </nav>
 
+
+
   {% block content%}{% endblock%}
 
 </body>
 
 <!-- Pié de página -->
-  <footer class="footer text-faded text-center py-5">
-    <div class="container">
-      <p class="m-0">
-        <a href="" class="link">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
+<footer class="footer text-faded text-center py-5">
+  <div class="container">
+    <p class="m-0">
+      <a href="" class="link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
 
-        <a href="" class="link">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
+      <a href="" class="link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
 
-        <a href="" class="link">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </p>
-      <p class="m-0 mbt">
-        <a href="sample.html" class="link">Política de privacidad</a> ·
-        <a href="sample.html" class="link">Aviso legal</a> ·
-        <a href="sample.html" class="link">Cookies</a>
-      </p>
-      <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
-    </div>
-  </footer>
-
-<!-- Bootstrap -->
-<script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <a href="" class="link">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </p>
+    <p class="m-0 mbt">
+      <a href="sample.html" class="link">Política de privacidad</a> ·
+      <a href="sample.html" class="link">Aviso legal</a> ·
+      <a href="sample.html" class="link">Cookies</a>
+    </p>
+    <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
+  </div>
+</footer>
 
 </html>
