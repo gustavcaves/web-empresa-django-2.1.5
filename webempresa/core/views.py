@@ -17,6 +17,3 @@ def contact(request):
 
 def blog(request):
     return render(request, "core/blog.html")
-
-def sample(request):
-    return render(request, "core/sample.html")

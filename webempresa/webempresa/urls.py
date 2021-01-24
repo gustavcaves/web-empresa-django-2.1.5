@@ -19,6 +19,8 @@ from django.urls import path, include
 # from services import view as view_services
 
 urlpatterns = [
+    path('page/', include('pages.urls')),
+    path('blog/', include('blog.urls')),
     path('services/', include('services.urls')),
     path('', include('core.urls')),
     path('admin/', admin.site.urls),
