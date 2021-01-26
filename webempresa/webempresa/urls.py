@@ -19,6 +19,7 @@ from django.urls import path, include
 # from services import view as view_services
 
 urlpatterns = [
+    path('contact/', include('contact.urls')),
     path('page/', include('pages.urls')),
     path('blog/', include('blog.urls')),
     path('services/', include('services.urls')),

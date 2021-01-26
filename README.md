@@ -33,6 +33,10 @@ admin | 1234
 
 ## Comentarios
 
+### martes, 26 de enero de 2021 16:03 
+
+He finalizado, muy contento con las pautas, y aprendiendo.
+
 ### jueves, 21 de enero de 2021 10:12
 
 Creando este repo y configurando notas de control de pryecto.
